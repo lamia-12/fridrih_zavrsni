@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="still.css">
+    <title>NBA</title>
+</head>
+<body>
+    <h1>NBA</h1>
+    <button onclick="showTable()">Tablica</button>
+    <button onclick="showPlayers()">Igrači</button>
+    <button onclick="showGames()">Utakmice</button>
+
+    <div class="content" id="content"></div>
+
+    <script>
+        function showTable() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Klub</th>
+                            <th>Bodovi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Boston Celtics</td>
+                            <td>54</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Denver Nuggets</td>
+                            <td>52</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Milwaukee Bucks</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Golden State Warriors</td>
+                            <td>48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function showPlayers() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <ul>
+                    <li>LeBron James (Los Angeles Lakers)</li>
+                    <li>Stephen Curry (Golden State Warriors)</li>
+                    <li>Giannis Antetokounmpo (Milwaukee Bucks)</li>
+                    <li>Kevin Durant (Phoenix Suns)</li>
+                </ul>
+            `;
+        }
+
+        function showGames() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h2>Utakmice</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Domaćin</th>
+                            <th>Gost</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>19. ožujka 2025.</td>
+                            <td>Charlotte Hornets</td>
+                            <td>Atlanta Hawks</td>
+                            <td>Nadolazeća</td>
+                        </tr>
+                        <tr>
+                            <td>19. ožujka 2025.</td>
+                            <td>Boston Celtics</td>
+                            <td>Brooklyn Nets</td>
+                            <td>Nadolazeća</td>
+                        </tr>
+                        <tr>
+                            <td>17. ožujka 2025.</td>
+                            <td>Golden State Warriors</td>
+                            <td>Milwaukee Bucks</td>
+                            <td>Odigrana</td>
+                        </tr>
+                        <tr>
+                            <td>17. ožujka 2025.</td>
+                            <td>Los Angeles Clippers</td>
+                            <td>Cleveland Cavaliers</td>
+                            <td>Odigrana</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+        }
+    </script>
+</body>
+</html>
